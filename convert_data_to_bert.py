@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 
  
-PATH_TO_TRAIN_CSV= '../emailinsight/pyScripts/data/enron_6_email_folders_KAMINSKI.tsv'
+PATH_TO_TRAIN_CSV= 'sample_input_data/enron_6_email_folders_KAMINSKI.tsv'
 CSV_SEP='\t'
 LABEL_FIELD_NAME = 'folderName'
 ROWID_FIELD_NAME = 'updateId'
