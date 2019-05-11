@@ -1,4 +1,5 @@
-# See https://appliedmachinelearning.blog/2019/03/04/state-of-the-art-text-classification-using-bert-model-predict-the-happiness-hackerearth-challenge/
+# See Post  https://appliedmachinelearning.blog/2019/03/04/state-of-the-art-text-classification-using-bert-model-predict-the-happiness-hackerearth-challenge/
+# clone BERT repo: git clone https://github.com/google-research/bert.git
 # Use convert_data_to_bert.py to convert the input .CSV to BERT format and create train/dev/test split --> result in data/train.csv data/dev.csv data/test.csv in BERT format
 # Download and unzip BERT model (ex: cased_L-12_H-768_A-12 - see command line params below) from https://github.com/google-research/bert#pre-trained-models
 # wget https://storage.googleapis.com/bert_models/2018_10_18/cased_L-12_H-768_A-12.zip
