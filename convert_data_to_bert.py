@@ -48,4 +48,6 @@ if not os.path.exists('data'):
     
 df_bert_train.to_csv('data/train.tsv', sep='\t', index=False, header=False)
 df_bert_dev.to_csv('data/dev.tsv', sep='\t', index=False, header=False)
+df_bert_test.to_csv('data/expected_test.tsv', sep='\t', index=False, header=True)
+df_bert_test = df_bert_test.drop(['label', 'alpha'], axis=1)
 df_bert_test.to_csv('data/test.tsv', sep='\t', index=False, header=True)
