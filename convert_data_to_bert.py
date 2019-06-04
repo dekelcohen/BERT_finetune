@@ -2,10 +2,10 @@ import os
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from convert_data_util import map_labels,params 
+from convert_data_util import map_labels,get_default_params 
 
     
-
+params = get_default_params()
 #def convert_csv(params):
     
 df = pd.read_csv(params.PATH_TO_TRAIN_CSV, sep=params.CSV_SEP) # Mac: may need , lineterminator='\r')
@@ -39,7 +39,8 @@ df_bert_train, df_bert_dev = train_test_split(df_bert_train, test_size=params.DE
 # Saving dataframes to .tsv format as required by BERT
 if not os.path.exists('data'):
     os.makedirs('data')
-    
+
+# *** TODO: call write then copy test.tsv to expected_test.tsv, drop columns and write test.tsv 
 df_bert_train.to_csv('data/train.tsv', sep='\t', index=False, header=False)
 df_bert_dev.to_csv('data/dev.tsv', sep='\t', index=False, header=False)
 df_bert_test.to_csv('data/expected_test.tsv', sep='\t', index=False, header=True)
