@@ -43,6 +43,28 @@ def map_labels(df,label_col_name,labels_map):
     return df
     
 
+def split_train_dev_test(df,params,get_test_df_from_csv_func):
+    '''
+    Input: Original df (to split), params object, get_test_df_from_csv_func - function that accepts path_to_csv and params --> read and convert to format
+    '''
+    df_train = df
+    
+    # If test set path argument is given, read and convert to BERT, if TEST_SIZE = 0.1 or 0.2 is given, split a test set
+    if params.PATH_TO_TEST_CSV is not None:
+        # Creating test dataframe according to BERT
+        df_test = get_test_df_from_csv_func(params.PATH_TO_TEST_CSV,params)
+    elif params.TEST_SIZE > 0:
+        df_train, df_test = train_test_split(df_train, test_size=params.TEST_SIZE)
+    else:
+        raise Exception('Error: Missing required parameter: Must specify either PATH_TO_TEST_CSV or TEST_SIZE (0.1)')
+    
+    # Create train, dev split
+    df_train, df_dev = train_test_split(df_train, test_size=params.DEV_SIZE)    
+    
+    params.df_train = df_train
+    params.df_dev = df_dev
+    params.df_test = df_test
+
 def write_dfs_to_csv(params):
     out_path = params.PATH_TO_OUTPUT_DATA    
     # Saving dataframes to .tsv format in target format (label,text ...)
