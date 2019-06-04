@@ -60,17 +60,12 @@ plotter.plot_training_curves('resources/taggers/'+results_folder+'/loss.tsv')
 plotter.plot_weights('resources/taggers/'+results_folder+'/weights.txt')
 
 #### This is how metrics output looks like
-#2019-06-04 11:37:58,523 ----------------------------------------------------------------------------------------------------
-#2019-06-04 11:38:01,232 ----------------------------------------------------------------------------------------------------
-#2019-06-04 11:38:01,232 Testing using best model ...
-#2019-06-04 11:38:01,233 loading file resources/taggers/ag_news/best-model.pt
-#2019-06-04 11:38:02,813 0.916   0.916   0.916
-#2019-06-04 11:38:02,813
-#MICRO_AVG: acc 0.845 - f1-score 0.916
-#MACRO_AVG: acc 0.8359 - f1-score 0.9099666666666666
-#ABBR       tp: 8 - fp: 1 - fn: 1 - tn: 490 - precision: 0.8889 - recall: 0.8889 - accuracy: 0.8000 - f1-score: 0.8889
-#DESC       tp: 135 - fp: 19 - fn: 3 - tn: 343 - precision: 0.8766 - recall: 0.9783 - accuracy: 0.8599 - f1-score: 0.9247
-#ENTY       tp: 75 - fp: 5 - fn: 19 - tn: 401 - precision: 0.9375 - recall: 0.7979 - accuracy: 0.7576 - f1-score: 0.8621
-#HUM        tp: 59 - fp: 4 - fn: 6 - tn: 431 - precision: 0.9365 - recall: 0.9077 - accuracy: 0.8551 - f1-score: 0.9219
-#LOC        tp: 77 - fp: 10 - fn: 4 - tn: 409 - precision: 0.8851 - recall: 0.9506 - accuracy: 0.8462 - f1-score: 0.9167
-#NUM        tp: 104 - fp: 3 - fn: 9 - tn: 384 - precision: 0.9720 - recall: 0.9204 - accuracy: 0.8966 - f1-score: 0.9455
+#2019-06-04 13:10:05,359 Testing using best model ...
+#2019-06-04 13:10:05,359 loading file resources/taggers/enorn_6_folders_inbox/best-model.pt
+#2019-06-04 13:10:12,561 0.7809  0.7809  0.7809
+#2019-06-04 13:10:12,561
+#MICRO_AVG: acc 0.6406 - f1-score 0.7809
+#MACRO_AVG: acc 0.6321 - f1-score 0.7731
+#DontSave   tp: 53 - fp: 13 - fn: 26 - tn: 86 - precision: 0.8030 - recall: 0.6709 - accuracy: 0.5761 - f1-score: 0.7310
+#Save       tp: 86 - fp: 26 - fn: 13 - tn: 53 - precision: 0.7679 - recall: 0.8687 - accuracy: 0.6880 - f1-score: 0.8152
+#2019-06-04 13:10:12,561 ----------------------------------------------------------------------------------------------------
