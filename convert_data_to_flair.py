@@ -16,10 +16,7 @@ def get_flair_df_from_csv(path_to_csv,params):
     return df_flair
 
 df = get_flair_df_from_csv(params.PATH_TO_TRAIN_CSV,params)
-    
-# Creating train and dev dataframes according to Flair
-# TODO: label_ transform 
- 
+     
 
 split_train_dev_test(df,params,get_flair_df_from_csv)
 write_dfs_to_csv(params)    
