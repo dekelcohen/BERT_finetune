@@ -12,10 +12,10 @@ def_params = MyObj()
 
 def_params.PATH_TO_TRAIN_CSV= 'D:/Dekel/Data/Text_py/emailinsight/pyScripts/data/enron_6_email_folders_Inboxes_KAMINSKI.tsv'
 def_params.CSV_SEP='\t'
-def_params.LABEL_FIELD_NAME = 'folderName'
+def_params.LABEL_FIELD_NAME = 'label'
 def_params.ROWID_FIELD_NAME = 'updateId'
 # The following fields are concat to a single text field for BERT input
-def_params.TEXT_FIELDS = ['subject', 'body', 'from', 'fromDomain', 'to', 'cc' ]
+def_params.TEXT_FIELDS = ['subject', 'content', 'sender', 'fromDomain', 'to', 'cc' ]
 def_params.PATH_TO_TEST_CSV = None
 def_params.TEST_SIZE = 0.1
 def_params.DEV_SIZE  = 0.1
